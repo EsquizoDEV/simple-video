@@ -1,0 +1,62 @@
+@import './button.css';
+
+body {
+    background-color: #26b4bc;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    max-inline-size: 900px;;
+    margin:auto;
+    
+}
+
+.player {
+    position:relative;
+    z-index:1;
+}
+.player video{
+    inline-size: 100%;
+    aspect-ratio: 16/9;
+    vertical-align:middle;
+}
+
+.overlay {
+    position:absolute;
+    inset:0;
+    opacity:0;
+    transition: 0.3s opacity;
+
+}
+.player:hover .overlay{
+    opacity:1;
+}
+
+.player-actions {
+    position:absolute;
+    inset:0;
+    display:flex;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+    /* z-index:2; */
+}
+
+.player-title {
+    color:white;
+    position:absolute;
+    inset-block-start:0;
+    inset-inline-start:20px;
+}
+
+.player-progress {
+    inset-block-end:0;
+    inset-inline:0;
+    position:absolute;
+    display:flex;
+}
+
+.player-progress input{
+    flex:1;
+}
+
